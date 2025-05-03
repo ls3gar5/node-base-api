@@ -30,10 +30,9 @@ fs.readdir(folder)
         console.log('Files in directory:', files);
 
         files.forEach(file => {
-//           console.log(`File: ${file}`);
-            const pathFile = path.join('./',folder, file);
-            console.log(pathFile);
-            fs.stat(pathFile, (err, stats) => { 
+            const filePath = path.join('./',folder, file);
+            console.log(filePath);
+            fs.stat(filePath, (err, stats) => { 
                 if (err) {
                     // console.error('Error getting file stats:', err);
                     // return;

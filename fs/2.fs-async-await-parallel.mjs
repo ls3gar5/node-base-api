@@ -6,8 +6,8 @@ import { readFile } from 'node:fs/promises';
 console.log('Starting...');
 
 Promise.allSettled([
-    readFile('./archivo.txt', 'utf-8'),
-    readFile('./archivo2.txt', 'utf-8')
+    readFile('../archivo.txt', 'utf-8'),
+    readFile('../archivo2.txt', 'utf-8')
 ]).then(([data, data2]) => {
     console.log('First file:', JSON.stringify(data));
     console.log('Second file', JSON.stringify(data2));
