@@ -43,7 +43,6 @@ async function lsFile(folder) {
         try {
             const filePath = path.join(folder, file);
             const stats = await ls(filePath);
-            console.log('stats');
             return { file, size: stats.size };
         } catch (error) {
             console.error('Error getting file stats:', error.message);
