@@ -1,6 +1,11 @@
-# node-base-api
-All the exercises about node - express
-01/05/2025
-https://www.youtube.com/watch?v=yB4n_K7dZV8&ab_channel=midulive
+This link go to all the classes to create a project from scratch
+https://github.com/midudev/curso-node-js
 
+# node-base-api
+Good to Know
+CJS => CommonJS 
+MJS => ECMAScript
+
+# 1.0.0
+We use "standard" devdependencies to use linter the code.
 

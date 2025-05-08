@@ -1,0 +1,43 @@
+{
+  "name": "base-api",
+  "version": "1.0.0",
+  "description": "Test NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ls3gar5/node-base-api.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "ls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ls3gar5/node-base-api/issues"
+  },
+  "homepage": "https://github.com/ls3gar5/node-base-api#readme",
+  "dependencies": {
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+    }
+  }
+}
