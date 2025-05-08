@@ -1,9 +1,11 @@
 {
   "name": "base-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Test NodeJs",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon node ./clase-02/1.http.js",
+    "route": "nodemon node ./clase-02/2.routing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,21 +25,12 @@
     "picocolors": "1.1.1"
   },
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "standard": "17.1.2"
   },
   "eslintConfig": {
     "extends": [
       "standard"
-    ],
-    "env": {
-      "node": true,
-      "es6": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {
-      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
-    }
+    ]
   }
 }
