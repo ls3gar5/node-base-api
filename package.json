@@ -1,11 +1,12 @@
 {
   "name": "base-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Test NodeJs",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon node ./clase-02/1.http.js",
-    "route": "nodemon node ./clase-02/2.routing.js",
+    "dev:1": "nodemon node ./clase-02/1.http.js",
+    "dev:2": "nodemon node ./clase-02/2.routing.js",
+    "dev:3": "node --watch ./clase-02/3.express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/ls3gar5/node-base-api#readme",
   "dependencies": {
+    "express": "^5.1.0",
     "picocolors": "1.1.1"
   },
   "devDependencies": {
