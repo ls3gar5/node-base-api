@@ -1,8 +1,7 @@
-const express = require('express')
-const auth = require('./middlewares/auth.js').auth
-
+import express from 'express';
+import auth  from './middlewares/auth.js'
+import dittoJSON from './pokemon/ditto.json' assert { type: "json" }
 const app = express()
-const dittoJSON = require('./pokemon/ditto.json')
 
 const port = process.env.PORT || 3000
 
@@ -12,13 +11,14 @@ app.disable('x-powered-by')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// midleware AUTH
 app.use('/', async (req, res, next) => {
   if (req.method === 'GET') {
-    console.log('GET /pokemon/ditto')
+    console.log('GET reuqest')
     await auth()
   } else if (req.method === 'POST') {
     const body = req.body
-    console.log('POST /pokemon', body)
+    console.log('POST', body)
   }
   next()
 })
