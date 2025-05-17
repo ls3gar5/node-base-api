@@ -1,0 +1,12 @@
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "description": "A simple Node.js server that serves an HTML file",
+  "type": "module",
+  "scripts": {
+    "start": "node beginners.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
