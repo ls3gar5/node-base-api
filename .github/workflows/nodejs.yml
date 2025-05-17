@@ -1,0 +1,46 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main  # or master, depending on your default branch name
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # If you need to build your static files (e.g., with npm)
+      # Uncomment and modify these steps as needed
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./simple_server
+      
+      - name: Build static files
+        run: npm run build
+        working-directory: ./simple_server
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to S3
+        run: |
+          # Replace 'midu-aws-demo-s3-leo78' with your actual S3 bucket name
+          # Replace 'build' with your build directory if different
+          aws s3 sync ./simple_server/dist s3://midu-aws-demo-s3-leo78 --delete
+          
+          # Optional: CloudFront cache invalidation if you use CloudFront
+          # aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
