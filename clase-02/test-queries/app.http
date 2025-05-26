@@ -12,3 +12,24 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/pokemon/ditto
+
+### Invoke Lambda function with GET request and query parameters
+GET https://7oacxan3lztwsnzfy56i4pnswy0axigs.lambda-url.us-east-1.on.aws?key1=TEST%204
+Accept: application/json
+
+### Invoke Lambda function with GET request and JSON body
+# Note: While uncommon, some API gateways can accept a body with GET requests
+GET https://7oacxan3lztwsnzfy56i4pnswy0axigs.lambda-url.us-east-1.on.aws
+Content-Type: application/json
+
+{
+  "key1": "TEST 4"
+}
+
+### Invoke Lambda function with POST request (more common for sending JSON body)
+POST https://7oacxan3lztwsnzfy56i4pnswy0axigs.lambda-url.us-east-1.on.aws
+Content-Type: application/json
+
+{
+  "key1": "TEST 4"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "aws",
+  "version": "1.0.0",
+  "description": "Test DynamoDB",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ls3gar5/node-base-api.git"
+  },
+  "author": "LS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ls3gar5/node-base-api/issues"
+  },
+  "homepage": "https://github.com/ls3gar5/node-base-api#readme",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.812.0",
+    "@aws-sdk/client-s3": "^3.812.0",
+    "@aws-sdk/client-translate": "^3.812.0",
+    "@aws-sdk/lib-dynamodb": "^3.812.0",
+    "crypto": "^1.0.1"
+  }
+}

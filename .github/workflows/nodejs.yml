@@ -36,7 +36,7 @@ jobs:
         run: |
           # Replace 'midu-aws-demo-s3-leo78' with your actual S3 bucket name
           # Replace 'build' with your build directory if different
-          aws s3 sync ./simple_server/dist s3://midu-aws-demo-s3-leo78 --delete
+          # aws s3 sync ./simple_server/dist s3://midu-aws-demo-s3-leo78 --delete
           
           # Optional: CloudFront cache invalidation if you use CloudFront
           # aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
