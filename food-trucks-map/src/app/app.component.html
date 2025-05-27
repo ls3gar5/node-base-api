@@ -1,5 +1,5 @@
 <google-map [center]="center"
-            [zoom]="zoom">
+            [zoom]="zoom" (mapClick)="onMapClick($event)">
   <map-marker *ngFor="let truck of foodTrucks" 
               [position]="truck.position" 
               [label]="truck.address">
