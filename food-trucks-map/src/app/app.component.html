@@ -1,0 +1,13 @@
+<google-map [center]="center"
+            [zoom]="zoom">
+  <map-marker *ngFor="let truck of foodTrucks" 
+              [position]="truck.position" 
+              [label]="truck.address">
+  </map-marker>
+  <!-- <info-window *ngFor="let truck of foodTrucks" 
+               [position]="truck.position">
+    <h3>{{ truck.address }}</h3>
+    <p>{{ truck.description }}</p>
+  </info-window> -->
+
+</google-map>>
