@@ -1,0 +1,8 @@
+GET http://localhost:3010/
+
+###
+GET http://localhost:3010/contact
+Content-Type: application/json
+
+###
+GET http://localhost:3010/bart.jpeg

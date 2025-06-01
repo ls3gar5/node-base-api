@@ -1,5 +1,5 @@
-const { createServer } = require('http')
-const dittoJSON = require('./pokemon/ditto.json')
+import { createServer } from 'http'
+import dittoJSON from './pokemon/ditto.json' with { type: "json" }
 
 const processRequest = (req, res) => {
   const { method, url } = req
@@ -28,6 +28,7 @@ const processRequest = (req, res) => {
             res.setHeader('Content-Type', 'application/json; charset=utf-8')
             res.end(JSON.stringify(data))
           })
+        default:
           break
       }
       break

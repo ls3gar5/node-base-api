@@ -4,9 +4,10 @@
   "description": "Test NodeJs",
   "main": "index.js",
   "scripts": {
-    "node:server": "nodemon node ./clase-02/1.http.mjs",
-    "node:router": "nodemon node ./clase-02/2.routing.js",
-    "express:server": "node --watch ./clase-02/3.express.js",
+    "node:server": "nodemon node 1.http.js",
+    "node:router": "nodemon node 2.routing.js",
+    "express:server": "node --watch 3.express.js",
+    "express:router": "node --watch 4.express.router.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
