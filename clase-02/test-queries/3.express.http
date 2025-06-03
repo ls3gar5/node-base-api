@@ -1,0 +1,21 @@
+### Invoke Hello World!
+GET http://localhost:3000/
+
+### Invoke error
+GET http://localhost:3000/error
+
+### Invoke abiliity to retrieve a list of Pokémon
+GET http://localhost:3000/pokemon/ditto
+
+### Shows the same Body content as the previous request
+POST http://localhost:3000/pokemon
+Content-Type: application/json
+
+{
+  "name": "Ditto",
+  "type": "Normal",
+  "level": 10
+}
+
+###  404 Not Found!!!!
+PUT http://localhost:3000/update
