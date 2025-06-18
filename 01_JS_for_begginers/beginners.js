@@ -41,7 +41,9 @@ const copy = {
 copy.details.city = "Los Angeles"; // Modifying a nested property
 console.log(person.details.city); // Output: { name: 'John', age: 31, details: { address: '123 Main St', city: 'Los Angeles' }, greet: [Function] }
 // RESPONSE WHY IS THE ANSWER?
-///Answer is B because shallow copy duplicates only the top-level properties of an object. If those properties hold references (like nested objects or arrays), the copy will still reference the same memory location as the original.
+///Answer is B because shallow copy duplicates only the top-level properties of an object. 
+// If those properties hold references (like nested objects or arrays), 
+// the copy will still reference the same memory location as the original.
 
 // 2. Write Clear and Descriptive Variable names
 
