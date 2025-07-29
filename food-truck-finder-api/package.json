@@ -1,0 +1,11 @@
+{
+  "name": "food-truck-finder-api",
+  "version": "1.0.0",
+  "description": "Serverless API to find food trucks near a location using San Francisco Open Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ls",
+  "license": "ISC"
+}
