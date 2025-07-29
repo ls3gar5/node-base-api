@@ -69,3 +69,5 @@ yarn.lock
 
 # jetbrains
 .idea
+
+.angular
