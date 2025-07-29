@@ -2,13 +2,13 @@
 // const { promisify } = require('node:util');
 // const readFilePromise = promisify(require('node:fs').readFile);
 
-const fs = require('node:fs/promises');
+import { readFile } from 'node:fs/promises';
 
 console.log('Starting...');
 
-fs.readFile('./archivo.txt', 'utf-8')
+readFile('./archivo.txt', 'utf-8')
 .then(data => {
-        console.log('File read:', data);
+        console.log('FIRST File: ', data);
  })
 .catch(err => {
     console.error('Error reading file:', err);
@@ -16,9 +16,9 @@ fs.readFile('./archivo.txt', 'utf-8')
 
 console.log('Doing anything else...');
 
-fs.readFile('./archivo2.txt', 'utf-8')
+readFile('./archivo2.txt', 'utf-8')
 .then(data => {
-    console.log('Second file', data);
+    console.log('SECOND File: ', data);
 })
 .catch(err => {
     console.error('Error reading file:', err);

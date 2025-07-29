@@ -2,12 +2,11 @@
 // const readFilePromise = promisify(require('node:fs').readFile);
 
 import { readFile } from 'node:fs/promises'
-
 console.log('Starting...')
 
 try {
-  const data = readFile('./archivo.txt', 'utf-8')
-  console.log('File read:', data)
+  const data = await readFile('./archivo.txt', 'utf-8')
+  console.log('FIRST File: ', data)
 } catch (error) {
   console.error('Error reading file archivo:', error.message)
 }
@@ -15,8 +14,8 @@ try {
 console.log('Doing anything else...')
 
 try {
-  const data2 = readFile('./archivo2.txt', 'utf-8')
-  console.log('Second file', data2)
+  const data2 = await readFile('./archivo2.txt', 'utf-8')
+  console.log('SECOND File: ', data2)
 } catch (error) {
   console.error('Error reading file archivo2:', error.message)
 }

@@ -1,5 +1,5 @@
 const os = require('node:os')
-const fs = require('node:fs')
+// const fs = require('node:fs')
 const path = require('node:path')
 
 console.log('Starting...')
