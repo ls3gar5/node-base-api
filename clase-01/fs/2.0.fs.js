@@ -1,9 +1,8 @@
-const fs = require('node:fs');
+import { readFile } from 'node:fs';
 
 console.log('Starting...');
 
-fs.readFile('./archivo.txt', 'utf-8', (err, data) => { 
-    console.log('File read:', data);
+readFile('./archivo.txt', 'utf-8', (err, data) => { 
     if (err) {
         console.error('Error reading file:', err);
     } else {
@@ -13,10 +12,10 @@ fs.readFile('./archivo.txt', 'utf-8', (err, data) => {
 
 console.log('Doing anything else...');
 
-fs.readFile('./archivo2.txt', 'utf-8', (err, data) => { 
+readFile('./archivo2.txt', 'utf-8', (err, data) => { 
     console.log('Second file', data);
     if (err) {
-        console.error('Error reading file:', err);
+        console.error('Error reading file: archivo2.txt', err);
     } else {
         console.log('File content:', data);
     }
