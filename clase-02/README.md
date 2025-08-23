@@ -1,3 +1,4 @@
+- Clase-02: [Creamos una API desde cero](https://www.youtube.com/watch?v=YmZE1HXjpd4)
 # ONLY BY  NODE!!
 ## curl localhost:3010
 

@@ -1,4 +1,5 @@
-import { greet, calculateTotal } from './utilities/greet.js'; // Importing the greet function
+// Importing the greet function
+import { greet, calculateTotal } from './utilities/greet.js'; 
 // 1. Use const and let Instead of var
 const name = "John"; // This is a constant variable
 let age = 30; // This is a block-scoped variable

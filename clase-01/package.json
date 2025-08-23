@@ -1,0 +1,16 @@
+{
+  "name": "clase-01",
+  "version": "1.0.0",
+  "description": "Node.js basics and HTTP server examples",
+  "main": "server/9.http.js",
+  "scripts": {
+    "start": "node server/9.http.js",
+    "dev": "node server/9.http.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["nodejs", "http", "server", "basics"],
+  "author": "",
+  "license": "MIT"
+}
